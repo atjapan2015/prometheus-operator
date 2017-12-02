@@ -147,7 +147,7 @@ prometheus:
   ##
   image:
     repository: quay.io/prometheus/prometheus
-    tag: v1.5.2
+    tag: v2.0.0
 
   ingress:
     ## If true, Prometheus Ingress will be created
