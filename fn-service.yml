@@ -1,0 +1,21 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: fn-monitor
+  labels:
+    app: my-release-fn
+    prometheus: kube-prometheus
+    role: fn-lb
+spec:
+  jobLabel: fn-monitor
+  selector:
+    matchLabels:
+      app: my-release-fn
+      release: my-release
+  namespaceSelector:
+    matchNames:
+    - default
+  endpoints:
+  - port: fn
+    interval: 5s
+    honorLabels: true
