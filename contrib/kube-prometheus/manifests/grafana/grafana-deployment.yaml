@@ -71,4 +71,4 @@ spec:
         emptyDir: {}
       - name: grafana-dashboards-0
         configMap:
-          name: grafana-dashboards-0
+          name: kube-prometheus-grafana
