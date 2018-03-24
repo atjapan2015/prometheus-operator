@@ -9,7 +9,8 @@ spec:
   endpoints:
   - port: http-metrics
     interval: 30s
-  - port: cadvisor
+  - port: https-metrics
+    path: /metrics/cadvisor
     interval: 30s
     honorLabels: true
   selector:
